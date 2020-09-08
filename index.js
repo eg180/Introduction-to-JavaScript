@@ -115,33 +115,52 @@ poundsToFeed(15, 1)
 
 const weapons = ["rock", "paper", "scissors"]
 
-var computerWeapon = Math.floor(Math.random() * 2 ) + 1;
-
 
 function rockPaperScissors(myWeapon) {
 
+
+    var indexNum = Math.floor(Math.random() * 3);
+    
+    computerWeapon = weapons[indexNum]
+
+    console.log(indexNum)
+    console.log(myWeapon)
+    console.log(computerWeapon)
+
     if (computerWeapon == "rock") {
-        if myWeapon == "rock" {
+
+        if (myWeapon == "rock") {
             console.log("It's a draw.");
-        } else if myWeapon == "paper" {
+        } else if (myWeapon == "paper") {
             console.log("You win!");
         } else {
             console.log("You lose!");
         }
-
-    else if (computerWeapon == "scissors") {
+    }
+    else if (computerWeapon == "scissors") {          
         if (myWeapon == "scissors") {
             console.log("It's a draw.");
         } else if (myWeapon == "rock") {
-            console.log("You win!")
+            console.log("You win!");
         } else {
-            console.log("You lose!")
+            console.log("You lose!");
+        }
+        }
+
+    else if (computerWeapon == "paper") {
+        if (myWeapon == "paper") {
+            console.log("It's a draw!");
+        } else if (myWeapon == "scissors") {
+            console.log("You win!");
+        } else {
+            console.log("You lose!");
         }
     }
-    }
+    
 
-}
+} // closes parent statements
 
+rockPaperScissors("paper");
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
