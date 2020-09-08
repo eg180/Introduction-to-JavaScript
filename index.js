@@ -165,7 +165,10 @@ rockPaperScissors("paper");
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
-
+function kmToMiles(km) {
+    converted = km * 0.621371;
+    console.log(converted);
+}
 
 
 
