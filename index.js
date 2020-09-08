@@ -158,7 +158,7 @@ function rockPaperScissors(myWeapon) {
     }
     
 
-} // closes parent statements
+}
 
 rockPaperScissors("paper");
 /************************************************************** Task 5 **************************************************************/
@@ -166,8 +166,8 @@ rockPaperScissors("paper");
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
 function kmToMiles(km) {
-    converted = km * 0.621371;
-    console.log(converted);
+    miles = km * 0.621371;
+    console.log(miles);
 }
 
 
@@ -175,7 +175,10 @@ function kmToMiles(km) {
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
   
 
-
+function ftTocm(feet) {
+    centimeters = feet * 30.48;
+    console.log(centimeters);
+}
 
 
 /************************************************************** Task 6 **************************************************************/
@@ -184,20 +187,39 @@ function kmToMiles(km) {
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
   
 
+function annoyingSong(startingNumber) {
+    for(i=startingNumber; startingNumber==2, startingNumber--;) {
+        console.log(startingNumber + " bottles of beer on the wall " + startingNumber + " bottles of beer. Take one down and pass it around " + (startingNumber - 1) + " bottles of beer on the wall.")
+    }
+}
 
+annoyingSong(99);
 
 
 /************************************************************** Task 7 **************************************************************/
 //Grade Calculator
-//write a javaScript program that takes a mark out of 100 and returns a corisponding letter grade 
+//write a javaScript program that takes a mark out of 100 and returns a corresponding letter grade 
 //90s should be A 
 //80s should be B 
 //70s should be Cs 
 //60s should be D 
 //and anything below 60 should be F
   
+function returnLetterGrade(numberGrade) {
+    if (numberGrade >= 90) {
+        console.log("A");
+    } else if (79 < numberGrade && numberGrade < 90) {
+        console.log("B");
+    } else if (69 < numberGrade && numberGrade < 80) {
+        console.log("C");
+    } else if (59 < numberGrade && numberGrade < 70) {
+        console.log("D");
+    } else {
+        console.log("F");
+    }
+}
 
-  
+returnLetterGrade(98); // Returns 'A'
   
 
 /************************************************************** Stretch **************************************************************/
@@ -205,6 +227,28 @@ function kmToMiles(km) {
 // Hint - you may need to study tomorrow's traning kit on arrays 
 // try looking up the .includes() method
 
+
+
+
+
+const vowels = ['a', 'e', 'i', 'o', 'u'];
+
+var myString = "Lambda School";
+
+var allLower = myString.toLowerCase();
+
+var totalVowels = 0;
+for(i = 0; i < vowels.length; i++) {
+    
+    if (myString.includes(vowels[i])) {
+        console.log("True");
+        totalVowels++;
+    } else {
+        console.log("False");
+    } 
+} console.log(totalVowels);
+
+// NOTE: This really only counts the unique instances of vowels. I didn't have enough time to learn how to make it count all instances.
 
 
 
