@@ -188,8 +188,14 @@ function ftTocm(feet) {
   
 
 function annoyingSong(startingNumber) {
-    for(i=startingNumber; startingNumber==2, startingNumber--;) {
-        console.log(startingNumber + " bottles of beer on the wall " + startingNumber + " bottles of beer. Take one down and pass it around " + (startingNumber - 1) + " bottles of beer on the wall.")
+    for(i=startingNumber; startingNumber==1, startingNumber--;) {
+        if(startingNumber==0) {
+            
+            console.log(startingNumber + " bottles of beer on the wall " + startingNumber + " bottles of beer. Take one down and pass it around " + (startingNumber) + " bottles of beer on the wall.");
+        } else {
+            console.log(startingNumber + " bottles of beer on the wall " + startingNumber + " bottles of beer. Take one down and pass it around " + (startingNumber - 1) + " bottles of beer on the wall.");
+        }
+        
     }
 }
 
